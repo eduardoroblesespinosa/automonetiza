@@ -29,6 +29,12 @@ $(document).ready(function() {
         appToast.show();
     }
 
+    // --- Carousel Initialization ---
+    const heroCarousel = new bootstrap.Carousel('#heroCarousel', {
+        interval: 5000,
+        pause: 'hover'
+    });
+
     // --- Settings Management ---
     $('#settings-form').on('submit', function(e) {
         e.preventDefault();
