@@ -1,0 +1,599 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoMonetiza Pro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="logo.png" alt="AutoMonetiza Pro Logo" style="height: 30px;">
+                AutoMonetiza Pro
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Características</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#how-it-works">¿Cómo funciona?</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pricing">Precios</a>
+                    </li>
+                     <li class="nav-item">
+                        <a class="nav-link" id="login-nav-link" href="#" data-bs-toggle="modal" data-bs-target="#authModal">Iniciar Sesión</a>
+                    </li>
+                    <li class="nav-item" id="register-nav-item">
+                        <a class="btn btn-primary ms-lg-3" href="#" data-bs-toggle="modal" data-bs-target="#authModal">Regístrate Gratis</a>
+                    </li>
+                    <li class="nav-item dropdown" id="account-nav-item" style="display: none;">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person-circle"></i> Mi Cuenta
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#dashboardModal">Dashboard</a></li>
+                            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#settingsModal">Configuración</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#" id="logout-link">Cerrar Sesión</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="hero" class="hero-section text-white text-center">
+        <div class="container">
+            <h1 class="display-3 fw-bold">Monetiza tu Pasión, al Instante.</h1>
+            <p class="lead my-4">La plataforma todo-en-uno para creadores digitales. Vende cursos, membresías, productos digitales y más, sin complicaciones técnicas.</p>
+            <a href="#" class="btn btn-primary btn-lg cta-auth-trigger" data-bs-toggle="modal" data-bs-target="#authModal">Comienza Gratis Ahora</a>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section id="features" class="py-5">
+        <div class="container text-center">
+            <h2 class="mb-5">Todo lo que necesitas para crecer</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 feature-card">
+                        <div class="card-body">
+                            <img src="feature_payment.png" alt="Pagos Integrados" class="feature-icon mb-3">
+                            <h5 class="card-title">Pagos Integrados</h5>
+                            <p class="card-text">Acepta pagos de todo el mundo con tarjetas de crédito, débito y otros métodos populares.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 feature-card">
+                        <div class="card-body">
+                           <img src="feature_content.png" alt="Venta de Contenido" class="feature-icon mb-3">
+                            <h5 class="card-title">Venta de Contenido</h5>
+                            <p class="card-text">Vende fácilmente ebooks, cursos, plantillas, música o cualquier producto digital.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 feature-card">
+                        <div class="card-body">
+                            <img src="feature_membership.png" alt="Membresías" class="feature-icon mb-3">
+                            <h5 class="card-title">Suscripciones</h5>
+                            <p class="card-text">Crea flujos de ingresos recurrentes con planes de membresía y contenido exclusivo.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 feature-card">
+                        <div class="card-body">
+                            <img src="feature_analytics.png" alt="Análisis" class="feature-icon mb-3">
+                            <h5 class="card-title">Análisis Simplificado</h5>
+                            <p class="card-text">Entiende a tu audiencia y optimiza tus ventas con nuestro panel de control intuitivo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works Section -->
+    <section id="how-it-works" class="py-5 bg-light">
+        <div class="container text-center">
+            <h2 class="mb-5">Empieza a vender en 3 simples pasos</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="step-icon"><i class="bi bi-person-plus-fill"></i></div>
+                    <h4>1. Crea tu cuenta</h4>
+                    <p>Regístrate gratis en menos de un minuto. Sin necesidad de tarjeta de crédito.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                     <div class="step-icon"><i class="bi bi-box-seam-fill"></i></div>
+                    <h4>2. Sube tu producto</h4>
+                    <p>Añade tu producto digital, curso o servicio. Nosotros te guiamos en el proceso.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                     <div class="step-icon"><i class="bi bi-share-fill"></i></div>
+                    <h4>3. Comparte y Gana</h4>
+                    <p>Comparte tu enlace de pago único en tus redes sociales y empieza a monetizar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2>Planes para cada etapa de tu negocio</h2>
+                <p class="lead">Elige el plan que mejor se adapte a tus necesidades. Sin contratos a largo plazo.</p>
+            </div>
+            <div class="row justify-content-center g-4">
+                <!-- Free Plan -->
+                <div class="col-lg-4">
+                    <div class="card text-center h-100 shadow">
+                        <div class="card-header">
+                            <h4 class="fw-normal">Gratis</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">$0<small class="text-muted fw-light">/mes</small></h1>
+                            <p>+ 5% comisión por transacción</p>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Productos ilimitados</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Pagos seguros</li>
+                                <li><i class="bi bi-x-circle"></i> Dominio personalizado</li>
+                                <li><i class="bi bi-x-circle"></i> Soporte prioritario</li>
+                            </ul>
+                            <button type="button" class="btn btn-lg btn-outline-primary w-100 cta-auth-trigger" data-bs-toggle="modal" data-bs-target="#authModal">Comenzar</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pro Plan -->
+                <div class="col-lg-4">
+                    <div class="card text-center h-100 shadow-lg border-primary">
+                         <div class="card-header bg-primary text-white">
+                            <h4 class="fw-normal">Pro</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">$29<small class="text-muted fw-light">/mes</small></h1>
+                            <p>+ 2% comisión por transacción</p>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Todo lo del plan Gratis</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Comisiones reducidas (2%)</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Dominio personalizado</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Soporte prioritario</li>
+                            </ul>
+                            <button type="button" class="btn btn-lg btn-primary w-100 cta-auth-trigger" id="select-pro-plan" data-bs-toggle="modal" data-bs-target="#authModal">Elegir Plan Pro</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Auth Modal -->
+    <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="authModalLabel">Crea tu cuenta</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            
+            <!-- Register View -->
+            <div id="register-view">
+              <p class="text-center text-muted">Únete a miles de creadores para monetizar tu pasión.</p>
+              <div class="d-grid gap-2 mb-3">
+                <button class="btn btn-light border social-btn" type="button"><i class="bi bi-google me-2"></i> Continuar con Google</button>
+                <button class="btn btn-light border social-btn" type="button"><i class="bi bi-meta me-2"></i> Continuar con Meta</button>
+              </div>
+              <div class="text-center my-3">
+                  <small class="text-muted">O regístrate con tu correo</small>
+              </div>
+              <form id="register-form">
+                <div class="mb-3">
+                  <label for="registerEmail" class="form-label">Correo electrónico</label>
+                  <input type="email" class="form-control" id="registerEmail" placeholder="tu@email.com" required>
+                </div>
+                <div class="mb-3">
+                  <label for="registerPassword" class="form-label">Contraseña</label>
+                  <input type="password" class="form-control" id="registerPassword" placeholder="Crea una contraseña segura" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100 mt-2">Crear cuenta gratis</button>
+              </form>
+              <div class="text-center mt-3">
+                <small>¿Ya tienes una cuenta? <a href="#" id="show-login" class="fw-bold">Inicia sesión</a></small>
+              </div>
+            </div>
+    
+            <!-- Login View (hidden by default) -->
+            <div id="login-view" style="display: none;">
+               <p class="text-center text-muted">Bienvenido de nuevo.</p>
+               <div class="d-grid gap-2 mb-3">
+                <button class="btn btn-light border social-btn" type="button"><i class="bi bi-google me-2"></i> Iniciar sesión con Google</button>
+                <button class="btn btn-light border social-btn" type="button"><i class="bi bi-meta me-2"></i> Iniciar sesión con Meta</button>
+              </div>
+              <div class="text-center my-3">
+                  <small class="text-muted">O inicia sesión con tu correo</small>
+              </div>
+              <form id="login-form">
+                <div class="mb-3">
+                  <label for="loginEmail" class="form-label">Correo electrónico</label>
+                  <input type="email" class="form-control" id="loginEmail" placeholder="tu@email.com" required>
+                </div>
+                <div class="mb-3">
+                  <label for="loginPassword" class="form-label">Contraseña</label>
+                  <input type="password" class="form-control" id="loginPassword" placeholder="Tu contraseña" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100 mt-2">Iniciar Sesión</button>
+              </form>
+              <div class="text-center mt-3">
+                <small>¿No tienes una cuenta? <a href="#" id="show-register" class="fw-bold">Regístrate gratis</a></small>
+              </div>
+            </div>
+            
+            <!-- Success View (hidden by default) -->
+            <div id="success-view" class="text-center py-4" style="display: none;">
+                <i class="bi bi-check-circle-fill text-success" style="font-size: 3rem;"></i>
+                <h4 class="mt-3" id="success-title">¡Registro completado!</h4>
+                <p id="success-message">¡Bienvenido a AutoMonetiza Pro!</p>
+                <button class="btn btn-primary w-100" data-bs-dismiss="modal">Continuar</button>
+            </div>
+    
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dashboard Modal -->
+    <div class="modal fade" id="dashboardModal" tabindex="-1" aria-labelledby="dashboardModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="dashboardModalLabel"><i class="bi bi-speedometer2 me-2"></i>Mi Panel de Creador</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body bg-light">
+              <div class="container-fluid">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 g-4 mb-4">
+                    <div class="col">
+                        <div class="card text-center h-100">
+                            <div class="card-body">
+                                <h6 class="card-subtitle mb-2 text-muted"><i class="bi bi-cash-stack me-1"></i>Ingresos (Neto)</h6>
+                                <p class="card-text h3" id="totalRevenue">$0.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card text-center h-100">
+                            <div class="card-body">
+                                <h6 class="card-subtitle mb-2 text-muted"><i class="bi bi-cart-check-fill me-1"></i>Ventas Totales</h6>
+                                <p class="card-text h3" id="totalSales">0</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card text-center h-100">
+                            <div class="card-body">
+                                <h6 class="card-subtitle mb-2 text-muted"><i class="bi bi-wallet2 me-1"></i>Balance Disponible</h6>
+                                <p class="card-text h3 text-success" id="availableBalance">$0.00</p>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="col">
+                        <div class="card text-center h-100">
+                            <div class="card-body">
+                                <h6 class="card-subtitle mb-2 text-muted"><i class="bi bi-pie-chart-fill me-1"></i>Comisiones Pagadas</h6>
+                                <p class="card-text h3" id="commissionsPaid">$0.00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="mb-4">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h4 class="mb-0">Mis Productos</h4>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addProductModal">
+                        <i class="bi bi-plus-circle-fill me-2"></i>Añadir Nuevo Producto
+                    </button>
+                </div>
+                <div id="productList" class="row g-4">
+                    <!-- Products will be injected here by JS -->
+                    <div id="no-products-message" class="col-12 text-center text-muted py-5">
+                         <i class="bi bi-box2-heart" style="font-size: 4rem;"></i>
+                         <p class="mt-3 lead">Aún no has añadido ningún producto.</p>
+                         <p>¡Haz clic en "Añadir Nuevo Producto" para empezar a vender!</p>
+                    </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Settings Modal -->
+    <div class="modal fade" id="settingsModal" tabindex="-1" aria-labelledby="settingsModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="settingsModalLabel"><i class="bi bi-gear-fill me-2"></i>Configuración de la Cuenta</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="settings-form">
+                <div class="mb-4">
+                    <h6 class="mb-3">Integraciones de Pago del Creador</h6>
+                    <label for="paypalClientId" class="form-label">PayPal Client ID</label>
+                    <input type="text" class="form-control" id="paypalClientId" placeholder="Introduce tu PayPal Client ID de producción o sandbox">
+                    <div class="form-text">
+                        Esta ID se usará para procesar los pagos de tus clientes.
+                        <a href="https://developer.paypal.com/dashboard/applications/live" target="_blank">Encuentra tu ID aquí</a>.
+                    </div>
+                </div>
+                <hr class="my-4">
+                <div class="mb-3">
+                    <h6 class="mb-3">Configuración de la Plataforma</h6>
+                     <p class="text-muted small">
+                        Las comisiones por ventas se envían automáticamente a la plataforma para mantener el servicio. 
+                        El correo de la plataforma para comisiones es <strong class="user-select-all">eduardoroblesespinosa@hotmail.com</strong>.
+                    </p>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Guardar Configuración</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add Product Modal -->
+    <div class="modal fade" id="addProductModal" tabindex="-1" aria-labelledby="addProductModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="addProductModalLabel">Añadir Nuevo Producto</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="add-product-form" novalidate>
+                <div class="mb-3">
+                    <label for="productName" class="form-label">Nombre del Producto</label>
+                    <input type="text" class="form-control" id="productName" placeholder="Ej: Mi increíble Ebook" required>
+                </div>
+                <div class="mb-3">
+                    <label for="productDescription" class="form-label">Descripción</label>
+                    <textarea class="form-control" id="productDescription" rows="3" placeholder="Describe tu producto para atraer clientes"></textarea>
+                </div>
+                 <div class="mb-3">
+                    <label for="productPrice" class="form-label">Precio (USD)</label>
+                    <div class="input-group">
+                        <span class="input-group-text">$</span>
+                        <input type="number" class="form-control" id="productPrice" placeholder="19.99" step="0.01" min="0" required>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="productImage" class="form-label">Imagen del Producto (Thumbnail)</label>
+                    <input class="form-control" type="file" id="productImage" accept="image/*">
+                </div>
+                <div class="mb-3">
+                    <label for="productFile" class="form-label">Archivo del Producto Digital</label>
+                    <input class="form-control" type="file" id="productFile">
+                </div>
+                <button type="submit" class="btn btn-primary w-100 mt-2">Guardar Producto</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Edit Product Modal -->
+    <div class="modal fade" id="editProductModal" tabindex="-1" aria-labelledby="editProductModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="editProductModalLabel">Editar Producto</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="edit-product-form" novalidate>
+                <input type="hidden" id="editProductId">
+                <div class="mb-3">
+                    <label for="editProductName" class="form-label">Nombre del Producto</label>
+                    <input type="text" class="form-control" id="editProductName" required>
+                </div>
+                <div class="mb-3">
+                    <label for="editProductDescription" class="form-label">Descripción</label>
+                    <textarea class="form-control" id="editProductDescription" rows="3"></textarea>
+                </div>
+                 <div class="mb-3">
+                    <label for="editProductPrice" class="form-label">Precio (USD)</label>
+                    <div class="input-group">
+                        <span class="input-group-text">$</span>
+                        <input type="number" class="form-control" id="editProductPrice" step="0.01" min="0" required>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="editProductImage" class="form-label">Cambiar Imagen del Producto</label>
+                    <input class="form-control" type="file" id="editProductImage" accept="image/*">
+                    <small class="form-text text-muted">Deja en blanco para mantener la imagen actual.</small>
+                </div>
+                <div class="mb-3">
+                    <label for="editProductFile" class="form-label">Cambiar Archivo del Producto</label>
+                    <input class="form-control" type="file" id="editProductFile">
+                     <small class="form-text text-muted">Deja en blanco para mantener el archivo actual.</small>
+                </div>
+                <button type="submit" class="btn btn-primary w-100 mt-2">Guardar Cambios</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product Page Modal -->
+    <div class="modal fade" id="productPageModal" tabindex="-1" aria-labelledby="productPageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                 <div class="modal-header border-0">
+                    <h5 class="modal-title" id="productPageModalLabel">Página de Producto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="product-page-content">
+                    <!-- Dynamic content will be injected here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms of Service Modal -->
+    <div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="termsModalLabel">Términos del Servicio</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p><strong>Última actualización: 24 de Julio de 2024</strong></p>
+            <p>Bienvenido a AutoMonetiza Pro. Estos términos y condiciones describen las reglas y regulaciones para el uso del sitio web de AutoMonetiza Pro.</p>
+
+            <h6>1. Aceptación de los Términos</h6>
+            <p>Al acceder a este sitio web, asumimos que aceptas estos términos y condiciones en su totalidad. No continúes usando el sitio web de AutoMonetiza Pro si no aceptas todos los términos y condiciones establecidos en esta página.</p>
+
+            <h6>2. Cuentas</h6>
+            <p>Cuando creas una cuenta con nosotros, garantizas que la información que nos proporcionas es precisa, completa y actual en todo momento. La información inexacta, incompleta o desactualizada puede resultar en la terminación inmediata de tu cuenta en nuestro Servicio.</p>
+
+            <h6>3. Productos y Contenido Digital</h6>
+            <p>Como creador, eres el único responsable del contenido y los productos digitales que subes y vendes a través de nuestra plataforma. Debes poseer los derechos de autor o tener permiso para usar y distribuir todo el contenido que publiques.</p>
+
+            <h6>4. Pagos, Comisiones y Reembolsos</h6>
+            <p>AutoMonetiza Pro facilita los pagos entre tú (el creador) y tus clientes. Cobramos una comisión por transacción basada en tu plan de suscripción. Eres responsable de configurar tu pasarela de pago (por ejemplo, PayPal) para recibir tus ganancias. Las políticas de reembolso son responsabilidad del creador individual.</p>
+
+            <h6>5. Propiedad Intelectual</h6>
+            <p>El Servicio y su contenido original (excluyendo el contenido proporcionado por los usuarios), características y funcionalidad son y seguirán siendo propiedad exclusiva de AutoMonetiza Pro y sus licenciantes.</p>
+
+            <h6>6. Terminación</h6>
+            <p>Podemos terminar o suspender tu cuenta inmediatamente, sin previo aviso ni responsabilidad, por cualquier motivo, incluido, entre otros, si incumples los Términos.</p>
+
+            <h6>7. Limitación de Responsabilidad</h6>
+            <p>En ningún caso AutoMonetiza Pro, ni sus directores, empleados, socios, agentes, proveedores o afiliados, serán responsables de daños indirectos, incidentales, especiales, consecuentes o punitivos, incluidos, entre otros, la pérdida de beneficios, datos, uso, buena voluntad u otras pérdidas intangibles, resultantes de tu acceso o uso o incapacidad para acceder o usar el Servicio.</p>
+
+            <h6>8. Cambios</h6>
+            <p>Nos reservamos el derecho, a nuestra sola discreción, de modificar o reemplazar estos Términos en cualquier momento. Si una revisión es material, intentaremos proporcionar un aviso de al menos 30 días antes de que entren en vigencia los nuevos términos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Privacy Policy Modal -->
+    <div class="modal fade" id="privacyModal" tabindex="-1" aria-labelledby="privacyModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="privacyModalLabel">Política de Privacidad</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p><strong>Última actualización: 24 de Julio de 2024</strong></p>
+            <p>Esta Política de Privacidad describe nuestras políticas y procedimientos sobre la recopilación, uso y divulgación de tu información cuando utilizas el Servicio y te informa sobre tus derechos de privacidad y cómo la ley te protege.</p>
+
+            <h6>1. Información que Recopilamos</h6>
+            <p>Recopilamos varios tipos de información para diversos fines para proporcionar y mejorar nuestro Servicio para ti.</p>
+            <ul>
+                <li><strong>Datos Personales:</strong> Al usar nuestro Servicio, podemos pedirte que nos proporciones cierta información de identificación personal que se puede utilizar para contactarte o identificarte ("Datos Personales"). Esto puede incluir, entre otros: dirección de correo electrónico, nombre y apellido.</li>
+                <li><strong>Datos de Uso:</strong> Podemos recopilar información sobre cómo se accede y se utiliza el Servicio ("Datos de Uso"). Estos Datos de Uso pueden incluir información como la dirección de Protocolo de Internet de tu computadora (por ej., dirección IP), tipo de navegador, versión del navegador, las páginas de nuestro Servicio que visitas, la hora y fecha de tu visita, el tiempo dedicado a esas páginas, identificadores únicos de dispositivos y otros datos de diagnóstico.</li>
+                <li><strong>Datos de Pago:</strong> Para procesar pagos, utilizamos servicios de terceros (por ejemplo, PayPal). No almacenamos ni recopilamos los detalles de tu tarjeta de pago. Esa información se proporciona directamente a nuestros procesadores de pago de terceros cuyo uso de tu información personal se rige por su Política de Privacidad.</li>
+            </ul>
+
+            <h6>2. Uso de tus Datos</h6>
+            <p>AutoMonetiza Pro utiliza los datos recopilados para diversos fines:</p>
+            <ul>
+                <li>Para proporcionar y mantener nuestro Servicio.</li>
+                <li>Para notificarte sobre cambios en nuestro Servicio.</li>
+                <li>Para permitirte participar en funciones interactivas de nuestro Servicio cuando elijas hacerlo.</li>
+                <li>Para proporcionar atención al cliente.</li>
+                <li>Para recopilar análisis o información valiosa para que podamos mejorar nuestro Servicio.</li>
+                <li>Para monitorear el uso de nuestro Servicio.</li>
+                <li>Para detectar, prevenir y abordar problemas técnicos.</li>
+            </ul>
+
+            <h6>3. Seguridad de los Datos</h6>
+            <p>La seguridad de tus datos es importante para nosotros, pero recuerda que ningún método de transmisión por Internet o método de almacenamiento electrónico es 100% seguro. Si bien nos esforzamos por utilizar medios comercialmente aceptables para proteger tus Datos Personales, no podemos garantizar su seguridad absoluta.</p>
+
+            <h6>4. Cookies</h6>
+            <p>Utilizamos cookies y tecnologías de seguimiento similares para rastrear la actividad en nuestro Servicio y mantener cierta información. Las cookies son archivos con una pequeña cantidad de datos que pueden incluir un identificador único anónimo. Puedes indicar a tu navegador que rechace todas las cookies o que indique cuándo se envía una cookie.</p>
+
+            <h6>5. Tus Derechos de Privacidad</h6>
+            <p>Tienes derecho a acceder, actualizar o eliminar la información que tenemos sobre ti. Siempre que sea posible, puedes acceder, actualizar o solicitar la eliminación de tus Datos Personales directamente desde la sección de configuración de tu cuenta.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container text-center text-md-start">
+            <div class="row">
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                    <h6 class="text-uppercase fw-bold">AutoMonetiza Pro</h6>
+                    <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px"/>
+                    <p>Empoderando a creadores para que conviertan su pasión en un negocio próspero. Creado con ❤️ para la comunidad digital.</p>
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <h6 class="text-uppercase fw-bold">Producto</h6>
+                     <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px"/>
+                    <p><a href="#features" class="text-white">Características</a></p>
+                    <p><a href="#pricing" class="text-white">Precios</a></p>
+                </div>
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                     <h6 class="text-uppercase fw-bold">Legal</h6>
+                     <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px"/>
+                    <p><a href="#" class="text-white" data-bs-toggle="modal" data-bs-target="#termsModal">Términos de Servicio</a></p>
+                    <p><a href="#" class="text-white" data-bs-toggle="modal" data-bs-target="#privacyModal">Política de Privacidad</a></p>
+                </div>
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                    <h6 class="text-uppercase fw-bold">Contacto</h6>
+                    <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px"/>
+                    <p><i class="bi bi-envelope-fill me-3"></i> info@automonetiza.pro</p>
+                     <div class="mt-3">
+                        <a href="#" class="text-white me-3"><i class="bi bi-facebook fs-4"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-twitter-x fs-4"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-instagram fs-4"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-linkedin fs-4"></i></a>
+                    </div>
+                </div>
+            </div>
+             <div class="text-center mt-4 pt-3 border-top border-secondary">
+                © 2024 AutoMonetiza Pro. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Container -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1100">
+      <div id="appToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <strong class="me-auto" id="toastTitle">Notificación</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body" id="toastBody">
+          This is a toast message.
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>

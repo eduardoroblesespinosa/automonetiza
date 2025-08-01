@@ -1,0 +1,226 @@
+:root {
+    --primary-color: #6a11cb;
+    --secondary-color: #2575fc;
+    --dark-color: #212529;
+    --light-color: #f8f9fa;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    padding-top: 56px; /* Adjust for fixed navbar */
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navbar .navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.navbar .nav-link {
+    font-weight: 600;
+}
+
+.btn-primary {
+    background-image: linear-gradient(to right, var(--secondary-color) 0%, var(--primary-color) 51%, var(--secondary-color) 100%);
+    background-size: 200% auto;
+    border: none;
+    transition: 0.5s;
+    color: white;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/* Hero Section */
+.hero-section {
+    padding: 10rem 0;
+    background: url(hero_background.png) no-repeat center center;
+    background-size: cover;
+    position: relative;
+    color: white;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(33, 37, 41, 0.7);
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* Features Section */
+#features {
+    background-color: var(--light-color);
+}
+.feature-card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+}
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+}
+
+/* Dashboard & Product Cards */
+#dashboardModal .modal-xl {
+    max-width: 1140px;
+}
+
+.product-card {
+    border: 1px solid #e9ecef;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.product-card .card-img-top {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 200px;
+    object-fit: cover;
+}
+
+#product-page-content img {
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: .5rem;
+}
+
+#paypal-button-container {
+    min-height: 50px; /* Reserve space to avoid layout shift */
+}
+
+.product-stats {
+    background-color: #f8f9fa;
+    border-top: 1px solid #e9ecef;
+}
+
+#no-products-message {
+    border: 2px dashed #dee2e6;
+    border-radius: 15px;
+    background-color: #fff;
+}
+
+#addProductModal .input-group-text {
+    background-color: var(--light-color);
+    border-right: 0;
+}
+
+#addProductModal .form-control {
+    border-radius: 8px;
+}
+
+#addProductModal .form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(106, 17, 203, 0.25);
+    border-color: var(--primary-color);
+}
+
+
+/* How it works */
+#how-it-works .step-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Pricing Section */
+#pricing .card {
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+#pricing .card-header {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+#pricing .card:hover {
+    transform: scale(1.02);
+}
+
+#pricing .border-primary {
+     border-width: 2px !important;
+     border-color: var(--primary-color) !important;
+}
+
+/* Auth Modal */
+#authModal .modal-content {
+    border-radius: 15px;
+    border: none;
+}
+
+#authModal .modal-header {
+    border-bottom: none;
+    padding: 1.5rem 1.5rem 0;
+}
+
+#authModal .modal-body {
+    padding: 1rem 1.5rem 1.5rem;
+}
+
+#authModal .form-control {
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+}
+#authModal .form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(106, 17, 203, 0.25);
+    border-color: var(--primary-color);
+}
+
+#authModal .social-btn {
+    padding: 0.75rem;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+}
+#authModal .social-btn:hover {
+    background-color: var(--light-color);
+}
+
+#authModal a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+#authModal a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer a {
+    text-decoration: none;
+    transition: color 0.2s;
+}
+footer a:hover {
+    color: #7c4dff !important;
+}
